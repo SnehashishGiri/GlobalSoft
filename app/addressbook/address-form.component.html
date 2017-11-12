@@ -1,0 +1,70 @@
+    <header>
+        <h2>Add Contact</h2>
+    </header>
+    <form [ngFormModel]="form" (ngSubmit)="onSubmit(form.value)">
+        <ul>
+                <li>
+                    <div class="row">
+                        <div class="col-sm-1">
+                        <label for="name">Name</label>
+                        </div>
+                        <div class="col-sm-2">
+                        <input type="text" name="name" id="name" required
+                            ngControl="name"
+                            #name="ngForm">
+                        </div>
+                    </div>
+                   
+                   
+                </li>
+            <li>
+             <div class="row">
+                <div class="col-sm-1">
+                <label for="address">Address</label>
+            </div>
+             <div class="col-sm-2"> 
+                <input type="text" name="address" id="address" required
+                    ngControl="address"
+                    #name="ngForm">
+                </div>
+            </div>
+           
+            </li>
+            <li>
+              <div class="row">
+                <div class="col-sm-1">
+                    <label for="email">Email</label>
+                </div>
+                <div class="col-sm-2"> 
+                    <input type="text" name="email" id="email" required
+                        ngControl="email"
+                        #name="ngForm">
+                    </div>
+                </div>
+               
+             </li>
+            <li>
+              <div class="row">
+                <div class="col-sm-1">
+                    <label for="phoneNumber">Phone Number</label>
+                </div>
+                <div class="col-sm-2"> 
+                    <input type="text" name="phoneNumber" id="phoneNumber" required
+                        ngControl="phoneNumber"
+                        #name="ngForm">
+                 </div>
+                </div>
+               
+            </li>
+        </ul>
+        <div class="row">
+         <div class="col-sm-2 wrapper">
+          <button type="submit" [disabled]="!form.valid" style='width:80px'>Save</button>
+         </div>
+        <div class='col-sm-2 wrapper'>
+                <a class='btn btn-primary' (click)='onBack()' style='width:80px; height:40px'>
+                    <i class='glyphicon glyphicon-chevron-left'></i> Back
+                </a>
+        </div>
+    </div>
+    </form>
